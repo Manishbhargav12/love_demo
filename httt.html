@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <button type="button" id="btn-close" aria-label="Close"></button>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 img-fluid"src="4.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="5.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="6.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="1.png.jpg" alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="2.jpg" alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="3.jpg" alt="Sixth slide">
+        </div>
+    </div>
+    <div class="carousel-caption fixed-caption">
+        <h3>My Princess 👑</h3>
+        <p>Your smile is the reason for my happiness. Keep smiling just like this, always. 💖</p>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+</div>
+    <div class="overlay"></div>
+    
+    <!-- Uncomment if you want background music -->
+
+    <!-- <button id="music-toggle">🎵</button> -->
+    <audio id="bg-music" loop preload="auto" src="Naino Ne Baandhi.mp4">/audio>
+        <source src="Naino Ne Baandhi.mp4" type="audio/mpeg">
+        <button class="music-toggle">🎶 Play song</button>
+    </audio>
+    
+    <div class="container">
+        <div class="btn-container">
+            <button id="welcome-btn" class="surprise-btn">💝 Click for a Surprise</button>
+            <button id="music-btn" class="surprise-btn hidden">🎵 Play Song</button>
+            <button id="photos-btn" class="surprise-btn hidden">😍🌸 Her Beautiful Smile</button>
+            <button id="message-btn" class="surprise-btn hidden">💖 Love Lines</button>
+            <button id="letter-btn" class="surprise-btn hidden">💌 Read My Heart</button>
+            <button id="video-btn" class="surprise-btn hidden">✨ Our Moment</button>
+            <!-- <button id="smile-btn" class="surprise-btn hidden">😊 Her Beautiful Smile 💖</button> -->
+            <button id="heart-btn" class="surprise-btn hidden">😊 Sparkle Heart💖</button>
+            <!-- <button id="-btn" class="sparkle-btn">💖 </button> -->
+
+        </div>
+        <div id="shayari-container" class="shayari-container hidden">
+            <p class="shayari">
+                teri yaadon ne diivaanaa banaa diyaa hai mujhe
+             har pal tere khayaal men guzaarataa huun main
+            pyaar kii ye kitaab sajaanaa chaahataa huun
+            har panne par teraa naam likhataa huun main
+            </p>
+            <p class="shayari">
+                terii har baat dil ko chhuu jaatii hai
+                terii har nazar mere lie duaa ban jaatii hai
+                jiivan ke har mod par teraa saath chaahataa huun
+
+                merii khushiyon kaa raaz tum ho, ye jaanataa huun main
+            </p>
+        </div>
+        <div id="letter-container" class="shayari-container hidden">
+            <p class="shayari">
+                Rishita,
+
+Sometimes words fall short when I try to express how deeply I love you. No sentence or poem can truly capture the feelings in my heart. But I want you to know, beyond any doubt, that I love you — more than words could ever say.
+
+You mean the world to me, and my love for you grows stronger every day.
+
+Forever yours.
+            </p>
+            
+        </div>
+    </div>
+   <div id="video-container">
+        <video id="my-video" width="640" height="360" controls autoplay muted>
+        <source src="moment.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+         <button id="close-video">✖</button>
+    </div>
+    
+    
+    <footer>
+        Made with all my Heart<span class="heart">❤️</span>just for you—my one and only love, RISHU <b><span class="heart">❤️</span><b>
+    </footer>
+    <script src="app.js" defer>
+        $('#carouselExampleControls').carousel({
+    interval: 3000, // 3 seconds
+    ride: 'carousel'
+});
+closeBtn.addEventListener('click', () => {
+  carousel.style.display = 'none';
+});
+document.addEventListener('DOMContentLoaded', function() {
+     const closeVideoBtn = document.querySelector('#close-video');
+  if (closeVideoBtn) {
+    closeVideoBtn.addEventListener('click', function() {
+      console.log("sad");
+    });
+  } else {
+    console.log("close-video button not found");
+  }
+
+});
+//     });
+// });
+</script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
