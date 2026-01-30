@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<!-- {% load static %} -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        docu
+
+    </title>
+    <!-- {% block title %} default {% endblock %} -->
+    <!-- <link rel="stylesheet" href="{% static 'cms2.css' %}"> -->
+    <link rel="stylesheet" href="cms2.css">
+</head>
+
+<body>
+    <!-- Nav Section Start -->
+    <nav>
+        <div class="logo">
+            <h1 id="btm">Havmour</h1>
+        </div>
+        <!-- <div id="nav1">
+            <li class="nav">Icecream</li>
+            <li class="nav">Home</li>
+            <li class="nav">Product</li>
+            <li class="nav">About Us</li>
+        </div> -->
+
+        <ul id="nav">
+            <li><a href="/icecream/static/1.jpg">Icecream</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+
+        <button class="btn-fill">Register</button>
+
+    </nav>
+    <!-- Nav Section End -->
+
+    <!--Header Section Start-->
+    <header>
+        <div class="content-container">
+            <h1 class="main-heading">
+                The Most<br>
+                <span>Delicious</span><br> Zulubar For You
+            </h1>
+            <p class="primary-heading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi id alias deleniti voluptatum nihil
+            </p>
+
+            <div class="btn-container">
+                <button class="btn-fill">Register</button>
+                <button class="btn-outline">Eat More</button>
+            </div>
+        </div>
+        <!-- <div class="img-container">
+            <img src="/static/zulubar.png" class="d-block w-100" alt="...">
+        </div> -->
+    </header>
+
+    <!--Popularity Sectiom Start-->
+    <section class="Popularity">
+        <div class="Popularity-one">
+            <h1>12k+</h1>
+            <p>Premium Product</p>
+        </div>
+        <div class="Popularity-two">
+            <h1>21k+</h1>
+            <p>Happy Customers</p>
+        </div>
+        <div class="Popularity-three">
+            <h1>29+</h1>
+            <p>Awards won</p>
+        </div>
+    </section>
+
+    <!--Popularity Sectiom End-->
+
+
+    <!--Product Sectiom Start-->
+    <section class="Product-container">
+        <div class="Product-heading">
+            <h1>
+                Shop Popular<br>
+                <span>Categories</span>
+            </h1>
+
+            <div class="Products">
+                <div class="Product">
+                    <div class="Product-img-layer">
+                        <div class="img img-one"></div>
+                    </div>
+                    <div class="Product-content">
+                        <h1 class="Product-name">Workshop Chair</h1>
+                        <p class="Product-quality">Indoor Chair</p>
+                    </div>
+                    <div class="Product">
+                        <div class="Product-img-layer">
+                            <div class="img img-two"></div>
+                        </div>
+                        <div class="Product-content">
+                            <h1 class="Product-name">Workshop Chair</h1>
+                            <p class="Product-quality">Indoor Chair</p>
+                        </div>
+                    </div>
+                    <div class="Product">
+                        <div class="Product-img-layer">
+                            <div class="img img-three"></div>
+                        </div>
+                        <div class="Product-content">
+                            <h1 class="Product-name">Workshop Chair</h1>
+                            <p class="Product-quality">Indoor Chair</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-container">
+                    <button>&#x2190;</button>
+                    <button>&rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Product Sectiom End-->
+
+</body>
+<script src="app.js"></script>
+
+</html>

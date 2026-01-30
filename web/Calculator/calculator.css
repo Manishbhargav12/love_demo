@@ -1,0 +1,31 @@
+#Calculator {
+    height: 350px;
+    width: 200px;
+    background-color: black;
+}
+
+.btn {
+    height: 35px;
+    width: 35px;
+}
+
+.btn1 {
+    height: 35px;
+    width: 35px;
+}
+
+.btn2 {
+    height: 35px;
+    width: 35px;
+}
+
+#key {
+    padding: 30px;
+}
+
+#display {
+    width: 96%;
+    height: 10%;
+    background-color: hsl(0, 0%, 24%);
+    color: aliceblue;
+}
