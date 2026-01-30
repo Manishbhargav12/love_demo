@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('photos-btn'),
                 document.getElementById('message-btn'),
                 document.getElementById('letter-btn'),
-                document.getElementById('video-btn')
+                document.getElementById('video-btn'),
+                document.getElementById('smile-btn')
             ];
              const messageBtn = document.getElementById('message-btn');
   const shayariContainer = document.getElementById('shayari-container');
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
- const msgBtn = document.getElementById('message-btn');
+ const purpose = document.getElementById('smile-btn');
 const msgContainer = document.getElementById('letter-container');
 
 buttons[3].addEventListener('click', () => {
@@ -40,15 +41,37 @@ buttons[3].addEventListener('click', () => {
 buttons[4].addEventListener('click', () => {
     document.querySelector('#video-container').style.zIndex = '9999';
     document.querySelector('#video-container').style.display = 'block';
+    if (!bgMusic.paused){
+        bgMusic.pause();
+        a=1
+    }
+    video.play();
+
+    
     // document.body.style.overflow = 'hidden';
   
+});
+
+function handleYesClick() {
+window.location.href = "purpose.html";
+}
+purpose.addEventListener('click', () => {
+    handleYesClick();
 });
 video = document.querySelector("#my-video")
 closeVideoBtn = document.querySelector('#close-video');
 closeVideoBtn.addEventListener('click', function() {
        document.querySelector('#video-container').style.zIndex = '-1';
+
     document.querySelector('#video-container').style.display = 'none';
     video.currentTime = 0; 
+    video.pause();
+    if (a==1){
+        bgMusic.play();
+        a=0
+    }   
+
+    
 })
 
 
@@ -70,67 +93,6 @@ if (musicToggle.length === 0) {
     return;
 }
 
-
-
-
-// Add floating heart particles
-
-// const heart = document.createElement('div');
-// heart.classList.add('heart-particle');
-// heart.innerHTML = '❤️';
-// heart.style.left = Math.random() * 100 + 'vw';
-// heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-// heart.style.opacity = Math.random();
-// heart.style.fontSize = Math.random() * 20 + 10 + 'px';
-// document.body.appendChild(heart);
-
-// setTimeout(() => {
-    //     heart.remove();
-    // }, 5000);
-    
-    // Carousel functionality
-    // const carousel = document.querySelector('.carousel-inner');
-    // const images = document.querySelectorAll('.carousel-inner img');
-    // const prevBtn = document.querySelector('.prev');
-    // const nextBtn = document.querySelector('.next');
-    // let currentIndex = 0;
-    
-    // function updateCarousel() {
-        //     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        // }
-        
-        // nextBtn.addEventListener('click', () => {
-            //     currentIndex = (currentIndex + 1) % images.length;
-            //     updateCarousel();
-            // });
-            
-            // prevBtn.addEventListener('click', () => {
-                //     currentIndex = (currentIndex - 1 + images.length) % images.length;
-                //     updateCarousel();
-                // });
-                
-                // // Auto-rotate every 5 seconds
-                // setInterval(() => {
-                    //     currentIndex = (currentIndex + 1) % images.length;
-                    //     updateCarousel();
-                    // }, 5000);
-                    //             document.getElementsByClassName('btn-close').addEventListener('click', function() {
-                        //             var carousel = document.getElementById('carouselExampleControls');
-                        
-                        //   // Stop the carousel sliding
-                        
-                        
-                        //   // Add fade-out effect
-                        //   carousel.style.transition = "opacity 0.5s ease";
-                        //   carousel.style.opacity = "0";
-                        
-                        //   // After fade, hide completely
-                        //   setTimeout(function() {
-                            //     carousel.style.display = "none";
-                            //   }, 500); // matches 0.5s fade time
-                            // });
-                            
-                            // Button reveal animation
                             
                             welcomeBtn.addEventListener('click', () => {
                                 welcomeBtn.classList.add('hidden');
@@ -209,23 +171,3 @@ if (musicToggle.length === 0) {
                     // setInterval(createHeart, 300);
                     
         });
-//     buttons[4].addEventListener('click', () => {
-//     const videoContainer = document.getElementById('video-container');
-//     const video = document.getElementById('my-video');
-
-//     if (videoContainer.classList.contains('revealed')) {
-//         // Hide and pause video
-//         videoContainer.classList.remove('revealed');
-//         videoContainer.classList.add('hidden');
-//         video.pause();
-//         buttons[4].textContent = '💌 My moment';
-//     } else {
-//         // Show and play video
-//         videoContainer.classList.remove('hidden');
-//         videoContainer.classList.add('revealed');
-//         video.play();
-//         buttons[4].textContent = '🎥 Playing moment';
-//     }
-// });
-
-// document.querySelector('.carousel').style.zIndex = '-1';
